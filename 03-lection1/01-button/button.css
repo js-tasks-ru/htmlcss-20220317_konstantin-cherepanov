@@ -4,76 +4,59 @@
     min-width: 189px;
     height: 48px;
     border-radius: 8px;
-    outline: 0px solid transparent;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: var(--textM);
     line-height: 19px;
     text-align: center;
-    padding: 14px;
+    padding: 15px 15px 14px;
     cursor: pointer;
     transition: opacity .3s ease-in-out, background .3s ease-in-out;
 }
 
-.button__primary {
+.button_primary {
     background: var(--primary);
     color: var(--white);
-    border: 2px solid var(--primary);
+    border: 1px solid var(--primary);
 }
 
-.button__secondary {
+.button_secondary {
     background: var(--purple);
     color: var(--white);
-    border: 2px solid var(--purple);
+    border: 1px solid var(--purple);
 }
 
-.button__alternate {
+.button_alternate {
     background: var(--white);
     color: var(--grey-4);
-    border: 2px solid var(--grey-3);
+    border: 1px solid var(--grey-3);
 }
 
-.button__primary:hover,
-.button__primary:active {
+.button_primary:hover,
+.button_primary:active {
     background: #2342C0;
-    border: 2px solid #2342C0;
+    border-color: #2342C0;
 }
 
-.button__secondary:hover,
-.button__secondary:active {
+.button_secondary:hover,
+.button_secondary:active {
     background: #5028C6;
-    border: 2px solid #5028C6;
+    border-color: #5028C6;
 }
 
-.button__alternate:hover,
-.button__alternate:active {
-    border: 2px solid var(--black);
+.button_alternate:hover,
+.button_alternate:active {
+    border-color: var(--black);
 }
 
-.button__primary-disabled,
-.button__secondary-disabled,
-.button__alternate-disabled {
+.button_primary:disabled,
+.button_secondary:disabled {
     opacity: .5;
-    cursor: not-allowed;
+    pointer-events: none;
 }
 
-.button__alternate-disabled {
+.button_alternate:disabled {
     opacity: .3;
-}
-
-.button__primary-disabled:hover {
-    background: var(--primary);
-    border: 2px solid var(--primary);
-}
-
-.button__secondary-disabled:hover {
-    background: var(--purple);
-    border: 2px solid var(--purple);
-}
-
-.button__alternate-disabled:hover {
-    background: var(--white);
-    color: var(--grey-4);
-    border: 2px solid var(--grey-3);
+    pointer-events: none;
 }
