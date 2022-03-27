@@ -1,21 +1,6 @@
 /* Стилизация аккордеона */
-@font-face {
-    font-family: "Inter-r";
-    font-style: normal;
-    font-weight: 400;
-    src: url("./fonts/inter-400.woff2") format("woff2");
-    font-display: swap;
-}
 
-@font-face {
-    font-family: "Inter-b";
-    font-style: normal;
-    font-weight: 700;
-    src: url("./fonts/inter-700.woff2") format("woff2");
-    font-display: swap;
-}
-
-.accordion-item {
+.accordion__item {
     border: 1px solid var(--grey-3);
     box-sizing: border-box;
     border-radius: 8px;
@@ -24,20 +9,20 @@
     position: relative;
 }
 
-.accordion-item:last-child {
+.accordion__item:last-child {
     margin-bottom: 0;
 }
 
-.accordion-item .accordion-item__accordion-item-title::-webkit-details-marker {
+.accordion__item .accordion-item__title::-webkit-details-marker {
     display: none
 }
 
-.accordion-item>.accordion-item__accordion-item-title {
+.accordion__item>.accordion-item__title {
     list-style: none;
 }
 
-.accordion-item__accordion-item-title {
-    font-family: 'Inter-r';
+.accordion-item__title {
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -45,8 +30,8 @@
     color: var(--black);
 }
 
-.accordion-item__accordion-item-text {
-    font-family: 'Inter-r';
+.accordion-item__text {
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -56,7 +41,7 @@
     margin-bottom: 0;
 }
 
-.accordion-item .accordion-item__accordion-item-title:before {
+.accordion__item .accordion-item__title:before {
     content: '';
     position: absolute;
     top: 24px;
@@ -69,7 +54,7 @@
     background-position: center center;
 }
 
-.accordion-item[open] .accordion-item__accordion-item-title:before {
+.accordion__item[open] .accordion-item__title:before {
     transform: rotate(-180deg);
 
 }
