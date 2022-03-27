@@ -1,1 +1,75 @@
 /* Стилизация аккордеона */
+@font-face {
+    font-family: "Inter-r";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/inter-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter-b";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./fonts/inter-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+.accordion-item {
+    border: 1px solid var(--grey-3);
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 24px 32px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-item .accordion-item__accordion-item-title::-webkit-details-marker {
+    display: none
+}
+
+.accordion-item>.accordion-item__accordion-item-title {
+    list-style: none;
+}
+
+.accordion-item__accordion-item-title {
+    font-family: 'Inter-r';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--black);
+}
+
+.accordion-item__accordion-item-text {
+    font-family: 'Inter-r';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--grey-4);
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.accordion-item .accordion-item__accordion-item-title:before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    display: block;
+    width: 18px;
+    height: 10px;
+    background-image: url(./image/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.accordion-item[open] .accordion-item__accordion-item-title:before {
+    transform: rotate(-180deg);
+
+}
