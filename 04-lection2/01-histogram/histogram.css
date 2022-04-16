@@ -19,19 +19,7 @@
     margin-bottom: 13px;
 }
 
-.histogram__text {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--black);
-    opacity: 0.8;
-}
-
+.histogram__text,
 .histogram__link {
     display: inline-block;
     margin: 0;
@@ -41,6 +29,14 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+}
+
+.histogram__text {
+    color: var(--black);
+    opacity: 0.8;
+}
+
+.histogram__link {
     color: var(--blue);
     text-decoration: none;
 }
