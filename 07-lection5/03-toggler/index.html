@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <!-- Страница с кнопкой переключения -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./toggler.css">
-    </head>
-    <body>
 
-    </body>
+<head>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./toggler.css">
+</head>
+
+<body style="display: flex; flex-direction: column; gap: 16px;">
+    <label class="toggler">
+        <input type="checkbox" class="toggler__input">
+        <span class="toggler__slider"></span>
+    </label>
+    <label class="toggler">
+        <input type="checkbox" class="toggler__input" checked>
+        <span class="toggler__slider"></span>
+    </label>
+    <label class="toggler">
+        <input type="checkbox" class="toggler__input" disabled>
+        <span class="toggler__slider"></span>
+    </label>
+</body>
+
 </html>

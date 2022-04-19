@@ -1,0 +1,112 @@
+.input-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.input-group__label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--grey-3);
+    margin-bottom: 5px;
+}
+
+.input-group__field {
+    width: 350px;
+    height: 56px;
+    background: var(--white);
+    border: 1px solid var(--grey-2);
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-top: 17px;
+    padding-left: 24px;
+    padding-bottom: 13px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--grey-4);
+}
+
+.input-group__field::placeholder {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--grey-2);
+}
+
+
+/* focus */
+
+.input-group__field:focus {
+    border-color: var(--blue);
+    outline: none;
+}
+
+
+/* success */
+
+.input-group_success::after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(./img/check-circle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.input-group_success>.input-group__field:focus {
+    border-color: var(--grey-2);
+    outline: none;
+}
+
+
+/* error */
+
+.input-group_error::after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(./img/alert-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.input-group_error>.input-group__field {
+    border-color: var(--error);
+    outline: none;
+}
+
+.input-group_error>.input-group__field:focus {
+    border-color: var(--error);
+    outline: none;
+}
+
+
+/* disabled */
+
+.input-group__field:disabled {
+    background-color: var(--grey-2);
+}
+
+.input-group__field:disabled::placeholder {
+    color: var(--grey-3);
+}
